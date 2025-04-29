@@ -1,0 +1,424 @@
+/* Base Styles */
+:root {
+  --primary-color: #4a6bff;
+  --secondary-color: #6c5ce7;
+  --accent-color: #00cec9;
+  --danger-color: #ff7675;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url("./giphy.webp") !important;
+  font-family: initial;
+  font-weight: bolder;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  font-family: initial;
+  font-weight: bolder;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  font-family: initial;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-family: initial;
+  font-weight: bolder;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  background: linear-gradient(to right, #fff, #ddd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+header h2 {
+  font-family: initial;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Glass Effect */
+.glass-effect {
+  font-family: initial;
+  font-weight: bolder;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+/* Balance Card */
+.balance-card {
+  font-family: initial;
+  font-weight: bolder;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 25px;
+  background: linear-gradient(to right, rgba(74, 107, 255, 0.3), rgba(108, 92, 231, 0.3));
+}
+
+.balance-card h3 {
+  font-family: initial;
+  font-weight: bolder;
+  font-size: 1.8rem;
+}
+
+/* Controls Container */
+.controls-container {
+  font-family: initial;
+  font-weight: bolder;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.control-group {
+  font-family: initial;
+  font-weight: bolder;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.control-group:hover {
+  font-family: initial;
+  font-weight: bolder;
+  transform: translateY(-5px);
+}
+
+.control-button {
+  font-family: initial;
+  font-weight: bolder;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.control-button:active {
+  font-family: initial;
+  font-weight: bolder;
+  transform: translateY(2px);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.add-button {
+  font-family: initial;
+  font-weight: bolder;
+  background: linear-gradient(to right, var(--accent-color), #00b894);
+  color: white;
+}
+
+.budget-button {
+  font-family: initial;
+  font-weight: bolder;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb);
+  color: white;
+}
+
+.control-button::after {
+  font-family: initial;
+  font-weight: bolder;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.control-button:hover::after {
+  font-family: initial;
+  font-weight: bolder;
+  transform: translateX(0);
+}
+
+.control-details {
+  font-family: initial;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.control-details span {
+  font-family: initial;
+  font-weight: bolder;
+  display: block;
+}
+
+.control-details span:first-child {
+  font-family: initial;
+  font-weight: bolder;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.control-details span:last-child {
+  font-family: initial;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+/* Transactions */
+.transactions-container h3 {
+  font-family: initial;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.search-container input {
+  font-family: initial;
+  font-weight: bolder;
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+}
+
+.search-container input::placeholder {
+  font-family: initial;
+  font-weight: bolder;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.transactions-list {
+  font-family: initial;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transaction-item {
+  font-family: initial;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.transaction-item:hover {
+  font-family: initial;
+  font-weight: bolder;
+  transform: translateX(5px);
+}
+
+.transaction-info {
+  font-family: initial;
+  font-weight: bolder;
+  flex: 1;
+}
+
+.transaction-title {
+  font-family: initial;
+  font-weight: bolder;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.transaction-value {
+  font-family: initial;
+  font-weight: bolder;
+  color: var(--accent-color);
+}
+
+.remove-button {
+  font-family: initial;
+  font-weight: bolder;
+  background: var(--danger-color);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.remove-button:hover {
+  font-family: initial;
+  font-weight: bolder;
+  background: #e84393;
+  transform: translateY(-2px);
+}
+
+.remove-button:active {
+  font-family: initial;
+  font-weight: bolder;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .controls-container {
+      flex-direction: column;
+  }
+  
+  .balance-card h3 {
+      font-size: 1.5rem;
+  }
+  
+  header h1 {
+      font-size: 1.8rem;
+  }
+  
+  header h2 {
+      font-size: 1.3rem;
+  }
+}
+
+/* Auth Modal Styles */
+.modal-overlay {
+  font-family: initial;
+  font-weight: bolder;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.auth-modal {
+  font-family: initial;
+  font-weight: bolder;
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-modal h2 {
+  font-family: initial;
+  font-weight: bolder;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  font-family: initial;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.form-group input {
+  font-family: initial;
+  font-weight: bolder;
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+.auth-button {
+  font-family: initial;
+  font-weight: bolder;
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+  font-family: initial;
+  font-weight: bolder;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.auth-toggle {
+  font-family: initial;
+  font-weight: bolder;
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.auth-toggle span {
+  font-family: initial;
+  font-weight: bolder;
+  color: #2575fc;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.sign-out-button {
+  font-family: initial;
+  font-weight: bolder;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sign-out-button:hover {
+  font-family: initial;
+  font-weight: bolder;
+  background: rgba(255, 255, 255, 0.3);
+}
